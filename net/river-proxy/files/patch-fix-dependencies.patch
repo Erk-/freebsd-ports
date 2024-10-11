@@ -1,7 +1,5 @@
-diff --git a/Cargo.toml b/Cargo.toml
-index 2b75343..f15e1f6 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
+--- Cargo.toml
++++ Cargo.toml
 @@ -24,6 +24,21 @@ install-updater = false
  inherits = "release"
  lto = "thin"
@@ -38,10 +36,8 @@ index 2b75343..f15e1f6 100644
 -git = "https://github.com/pandora-web-server/pandora-web-server.git"
 -rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
 -# path = "../pandora-web-server/pandora-module-utils"
-diff --git a/source/river/Cargo.toml b/source/river/Cargo.toml
-index 6d436f8..ed5fe6b 100644
---- a/source/river/Cargo.toml
-+++ b/source/river/Cargo.toml
+--- source/river/Cargo.toml
++++ source/river/Cargo.toml
 @@ -39,10 +39,10 @@ toml = "0.8.12"
  tracing = "0.1.40"
  
