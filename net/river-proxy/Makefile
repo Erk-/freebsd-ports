@@ -17,9 +17,11 @@ GH_ACCOUNT=	memorysafety
 
 WRKSRC=		${WRKDIR}/river-${DISTVERSION}
 
-USERS=		river
-GROUPS=		river
+# USERS=		river
+# GROUPS=		river
 
+CARGO_BUILD_ARGS=	--package=river
+CARGO_INSTALL_PATH=	source/river
 CARGO_USE_GITHUB=	yes
 
 .include <bsd.port.pre.mk>
@@ -28,7 +30,8 @@ post-patch:
 	${REINPLACE_CMD} -e s,%%WRKDIR%%,${WRKDIR}, ${WRKSRC}/Cargo.toml
 
 post-install:
-	${MV} ${WRKSRC}/source/river/assets/test-config.kdl ${STAGEDIR}${ETCDIR}/river.kdl.sample
+	${MKDIR} ${STAGEDIR}${ETCDIR}
+	${MV} ${WRKSRC}/source/river/assets/test-config.kdl ${STAGEDIR}${ETCDIR}/test-config.kdl.sample
 
 # post-install-DOCS-on:
 
