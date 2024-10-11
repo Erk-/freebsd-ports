@@ -22,6 +22,11 @@ GROUPS=		river
 
 CARGO_USE_GITHUB=	yes
 
+.include <bsd.port.pre.mk>
+
+post-patch:
+	${REINPLACE_CMD} -e s,%%WRKDIR%%,${WRKDIR}, ${WRKSRC}/Cargo.toml
+
 post-install:
 	${MV} ${WRKSRC}/source/river/assets/test-config.kdl ${STAGEDIR}${ETCDIR}/river.kdl.sample
 
