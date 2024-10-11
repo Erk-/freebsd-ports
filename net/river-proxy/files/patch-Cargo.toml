@@ -1,0 +1,46 @@
+--- Cargo.toml.orig
++++ Cargo.toml
+@@ -25,36 +25,22 @@ inherits = "release"
+ lto = "thin"
+ 
+ [patch.crates-io.pingora-load-balancing]
+-git = "https://github.com/memorysafety/pingora.git"
+-rev = "a98eadde498a45f32ab906d629342954fa173d11"
+-# path = "../pingora/pingora-load-balancing"
++path = "%%WRKDIR%%/pingora-a98eadde498a45f32ab906d629342954fa173d11/pingora-load-balancing"
+ 
+ [patch.crates-io.pingora-core]
+-git = "https://github.com/memorysafety/pingora.git"
+-rev = "a98eadde498a45f32ab906d629342954fa173d11"
+-# path = "../pingora/pingora-core"
++path = "%%WRKDIR%%/pingora-a98eadde498a45f32ab906d629342954fa173d11/pingora-core"
+ 
+ [patch.crates-io.pingora-cache]
+-git = "https://github.com/memorysafety/pingora.git"
+-rev = "a98eadde498a45f32ab906d629342954fa173d11"
+-# path = "../pingora/pingora-cache"
++path = "%%WRKDIR%%/pingora-a98eadde498a45f32ab906d629342954fa173d11/pingora-cache"
+ 
+ [patch.crates-io.pingora-http]
+-git = "https://github.com/memorysafety/pingora.git"
+-rev = "a98eadde498a45f32ab906d629342954fa173d11"
+-# path = "../pingora/pingora-http"
++path = "%%WRKDIR%%/pingora-a98eadde498a45f32ab906d629342954fa173d11/pingora-http"
+ 
+ [patch.crates-io.pingora-proxy]
+-git = "https://github.com/memorysafety/pingora.git"
+-rev = "a98eadde498a45f32ab906d629342954fa173d11"
+-# path = "../pingora/pingora-proxy"
++path = "%%WRKDIR%%/pingora-a98eadde498a45f32ab906d629342954fa173d11/pingora-proxy"
+ 
+ [patch.crates-io.static-files-module]
+-git = "https://github.com/pandora-web-server/pandora-web-server.git"
+-rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
+-# path = "../pandora-web-server/static-files-module"
++path = "%%WRKDIR%%/pandora-web-server-fe5d7dfc7d943d2bd8371309084a775db99e84f0/static-files-module"
+ 
+ [patch.crates-io.pandora-module-utils]
+-git = "https://github.com/pandora-web-server/pandora-web-server.git"
+-rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
+-# path = "../pandora-web-server/pandora-module-utils"
++path = "%%WRKDIR%%/pandora-web-server-fe5d7dfc7d943d2bd8371309084a775db99e84f0/pandora-module-utils"
