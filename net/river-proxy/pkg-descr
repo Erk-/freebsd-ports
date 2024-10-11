@@ -1,0 +1,4 @@
+River is a reverse proxy application under design, utilizing the
+pingora reverse proxy engine from Cloudflare. It will be written in
+Rust. It will be configurable, allowing for options including routing,
+filtering, and modification of proxied requests.
