@@ -1,0 +1,57 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 2b75343..f15e1f6 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -24,6 +24,21 @@ install-updater = false
+ inherits = "release"
+ lto = "thin"
+ 
++# Git dependencies
++
++[workspace.dependencies.static-files-module]
++git = "https://github.com/pandora-web-server/pandora-web-server.git"
++rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
++# path = "../pandora-web-server/static-files-module"
++
++[workspace.dependencies.pandora-module-utils]
++git = "https://github.com/pandora-web-server/pandora-web-server.git"
++rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
++# path = "../pandora-web-server/pandora-module-utils"
++
++
++# Pingora dependencies
++
+ [patch.crates-io.pingora-load-balancing]
+ git = "https://github.com/memorysafety/pingora.git"
+ rev = "a98eadde498a45f32ab906d629342954fa173d11"
+@@ -48,13 +63,3 @@ rev = "a98eadde498a45f32ab906d629342954fa173d11"
+ git = "https://github.com/memorysafety/pingora.git"
+ rev = "a98eadde498a45f32ab906d629342954fa173d11"
+ # path = "../pingora/pingora-proxy"
+-
+-[patch.crates-io.static-files-module]
+-git = "https://github.com/pandora-web-server/pandora-web-server.git"
+-rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
+-# path = "../pandora-web-server/static-files-module"
+-
+-[patch.crates-io.pandora-module-utils]
+-git = "https://github.com/pandora-web-server/pandora-web-server.git"
+-rev = "fe5d7dfc7d943d2bd8371309084a775db99e84f0"
+-# path = "../pandora-web-server/pandora-module-utils"
+diff --git a/source/river/Cargo.toml b/source/river/Cargo.toml
+index 6d436f8..ed5fe6b 100644
+--- a/source/river/Cargo.toml
++++ b/source/river/Cargo.toml
+@@ -39,10 +39,10 @@ toml = "0.8.12"
+ tracing = "0.1.40"
+ 
+ [dependencies.static-files-module]
+-version = "0.2"
++workspace = true
+ 
+ [dependencies.pandora-module-utils]
+-version = "0.2"
++workspace = true
+ 
+ [dependencies.tracing-subscriber]
+ version  = "0.3.18"
