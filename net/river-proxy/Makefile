@@ -9,7 +9,7 @@ COMMENT=	River reverse proxy application, based on the pingora library from Clou
 WWW=		https://www.memorysafety.org/initiative/reverse-proxy/
 
 LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE-APACHE
 
 USES=		cargo
 USE_GITHUB=	yes
