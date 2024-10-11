@@ -20,6 +20,8 @@ WRKSRC=		${WRKDIR}/river-${DISTVERSION}
 USERS=		river
 GROUPS=		river
 
+CARGO_USE_GITHUB=	yes
+
 post-install:
 	${MV} ${WRKSRC}/source/river/assets/test-config.kdl ${STAGEDIR}${ETCDIR}/river.kdl.sample
 
